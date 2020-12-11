@@ -1,0 +1,37 @@
+{
+  "name": "motionless",
+  "version": "0.0.1",
+  "description": "Static site generator from JavaScript code.",
+  "main": "index.js",
+  "author": "Chris McCormick <chris@mccormick.cx>",
+  "homepage": "https://github.com/chr15m/motionless",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chr15m/motionless.git",
+    "web": "https://github.com/chr15m/motionless"
+  },
+  "bugs": {
+    "url": "https://github.com/chr15m/motionless/issues/"
+  },
+  "dependencies": {
+    "commonmark": "^0.29.3",
+    "glob": "^7.1.6",
+    "hyperscript-custom": "^1.0.0",
+    "jsdom": "^16.4.0",
+    "minify": "^6.0.1"
+  },
+  "scripts": {},
+  "keywords": [
+    "static-site-generator",
+    "static-site",
+    "ssg",
+    "javascript",
+    "website",
+    "documentation",
+    "blog",
+    "templates",
+    "html",
+    "markdown",
+    "generator"
+  ]
+}
