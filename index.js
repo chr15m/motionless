@@ -7,20 +7,28 @@ const commonmark = require('commonmark');
 const md_reader = new commonmark.Parser();
 const md_writer = new commonmark.HtmlRenderer();
 
+const $ = (element, query) => element.querySelector(query);
+const $$ = (element, query) => [...element.querySelectorAll(query)];
+
 module.exports = {
-  minify: minify,
-  read: function(path) { return fs.readFileSync(path).toString(); },
-  write: fs.writeFileSync,
-  dir: function(path, options) { return fs.readdirSync(path, options); },
+  // file system helpers
+  load: function(path) { return fs.readFileSync(path).toString(); },
+  save: fs.writeFileSync,
+  dir: fs.readdirSync,
   glob: glob,
+  // dom creation
   dom: function(plaintext) {
     const d = new JSDOM(plaintext);
     d.doc = d.window.document;
+    d.$ = $.bind(null, d.doc);
+    d.$$ = $$.bind(null, d.doc);
     d.h = require("hyperscript-custom")({"document": d.doc})
-    d.$ = d.doc.querySelector.bind(d.doc);
-    d.$$ = (query)=>[...d.doc.querySelectorAll(query)];
+    d.render = d.serialize;
     return d;
   },
+  // minification
+  minify: minify,
+  // utility functions
   slug: function(text) {
     // https://gist.github.com/mathewbyrne/1280286
     return text.toString().toLowerCase()
@@ -30,18 +38,10 @@ module.exports = {
       .replace(/^-+/, '')             // Trim - from start of text
       .replace(/-+$/, '');            // Trim - from end of text
   },
-  $: function(element, query) {
-    return element.querySelector(query);
-  },
-  $$: function(element, query) {
-    return [...element.querySelectorAll(query)];
-  },
   remove: function(element) {
     return element.parentNode.removeChild(element);
   },
-  replace: function(element, replacement) {
-    return element.parentNode.replaceChild(replacement, element);
-  },
+  // markdown renderer
   md: function(plaintext) {
     return md_writer.render(md_reader.parse(plaintext));
   }
