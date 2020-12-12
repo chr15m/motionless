@@ -102,4 +102,4 @@ Converts `text` into a URL-friendly path, for example: `My Wonderful Webpage` be
 
 # Who
 
-This library is by [Chris McCormick](https://mccormick.cx/), [@mccrmx](https://twitter.com/mccrmx), so I can ship static websites fast using Node.
+Hi, 👋 I'm Chris and I made this. You can find me online at [mccormick.cx](https://mccormick.cx/) and [@mccrmx](https://twitter.com/mccrmx). I made this so I can ship static websites fast using Node.
