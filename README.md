@@ -31,7 +31,7 @@ Here's another example building a table of contents from all of the `<h2>` tags 
 // get a list of the h2 headers in the page
 const headers = template.$$("h2");
 if (headers.length) {
-  // build a list of <ul> tags with an <a> link for every header
+  // build a list of <li> tags with an <a> link for every header
   const items = headers.map((h2)=>{
     // add a named href the TOC can link to
     h2.appendChild(t.h("a", {"className": "pilcrow", "name": m.slug(h2.textContent)}, " "))
