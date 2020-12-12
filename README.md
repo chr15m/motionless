@@ -1,9 +1,8 @@
 <p align="center">
   <img src="logo.svg?sanitize=true" alt="motionless logo"><br/>
-  <strong>Motionless</strong> is a static site generator for making websites using plain JavaScript and HTML with Node.
 </p>
 
-There's no special templating or config language to learn. Instead you load plain HTML files and then use querySelectors and the DOM API to change pages using JavaScript, just like you would in the browser. Motionless has batteries included - it bundles dependencies for doing static site stuff like **markdown rendering**, **parsing HTML**, **reading and writing files**, **querySelectors**, etc. The result is a concise JavaScript API to specify exactly how to turn your HTML file into multiple web pages with different content. Motionless has a bias towards shipping sites fast and tries to save on typing.
+**Motionless** is a static site generator for making websites using plain JavaScript and HTML with Node. There's no special templating or config language to learn. Instead you load plain HTML files and then use querySelectors and the DOM API to change pages using JavaScript, just like you would in the browser. Motionless has batteries included - it bundles dependencies for doing static site stuff like **markdown rendering**, **parsing HTML**, **reading and writing files**, **querySelectors**, etc. The result is a concise JavaScript API to specify exactly how to turn your HTML file into multiple web pages with different content. Motionless has a bias towards shipping sites fast and tries to save on typing.
 
 # Install
 
