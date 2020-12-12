@@ -1,7 +1,7 @@
 {
   "name": "motionless",
   "version": "0.0.1",
-  "description": "Static site generator from JavaScript code.",
+  "description": "Generate static sites with code.",
   "main": "index.js",
   "author": "Chris McCormick <chris@mccormick.cx>",
   "homepage": "https://github.com/chr15m/motionless",
