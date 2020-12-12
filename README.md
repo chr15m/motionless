@@ -45,6 +45,27 @@ if (headers.length) {
 }
 ```
 
+A final example showing how to load up several markdown pages and render them using a single template.
+
+```javascript
+m = require('motionless');
+
+// load our basic page
+template = m.dom(m.load("index.html"));
+
+// list the content folder full of markdown files
+m.dir("content").forEach(function(pagefile) {
+  const page = m.load("content/" + pagefile);
+  const title = pagefile.replace(/\-/g, " ").replace(".md", "");
+  // set the main part of the template, the title, and the h1 tag
+  template.$("main").innerHTML = m.md(page);
+  template.$("title").textContent = title;
+  template.$("h1").textContent = title;
+  // save the updated HTML file
+  m.save(pagefile.replace(".md", ".html"), template.render());
+});
+```
+
 # API
 
 ## `m.load(path)`
