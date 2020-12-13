@@ -1,6 +1,6 @@
 {
   "name": "motionless",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generate static sites with code.",
   "main": "index.js",
   "author": "Chris McCormick <chris@mccormick.cx>",
