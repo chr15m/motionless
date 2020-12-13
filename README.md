@@ -10,6 +10,8 @@
 
 # Use
 
+There is a minimal working example in the [example](./example) folder. Here are some other recipes for doing common static site tasks:
+
 In this example we load an HTML file and a markdown file and replace the `<main>` element with a rendered version of the markdown.
 
 ```javascript
