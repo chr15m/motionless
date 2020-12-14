@@ -10,9 +10,11 @@
 
 # Use
 
-There is a minimal working example in the [example](./example) folder. Here are some other recipes for doing common static site tasks:
+There is a minimal working example in the [example](./example) folder. You can use the `live-reload` package (`npm i live-reload`) to serve your build directory while you build your static site.
 
-In this example we load an HTML file and a markdown file and replace the `<main>` element with a rendered version of the markdown.
+The following are some recipes for doing common static site tasks.
+
+In this first example we load an HTML file and a markdown file and replace the `<main>` element with a rendered version of the markdown.
 
 ```javascript
 const m = require('motionless');
