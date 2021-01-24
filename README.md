@@ -10,7 +10,18 @@
 
 # Use
 
-There is a minimal working example in the [example](./example) folder. You can use the `live-reload` package (`npm i live-reload`) to serve your build directory while you build your static site.
+The fastest way to get started is with the [motionless-site node template](https://github.com/chr15m/create-motionless-site):
+
+```
+npm i motionless-site YOUR-SITE-NAME
+cd YOUR-SITE-NAME
+```
+
+This will create a new project in `YOUR-SITE-NAME` that use motionless to build pages.
+
+To start from scratch instead, there is a minimal working example in the [example](./example) folder. You can use the `live-reload` package (`npm i live-reload`) to serve your build directory while you build your static site.
+
+## Static site recipes
 
 The following are some recipes for doing common static site tasks.
 
